@@ -4,4 +4,7 @@
   <string name="add_a_photo">Add a Photo</string>
   <string name="add_voice_note">Add Voice Note</string>
   <string name="save">Save</string>
+  <string name="kotnots">KotNots</string>
+  <string name="please_enter_note_text">Please enter note text!</string>
+  <string name="please_enter_title">Please enter title!</string>
 </resources>
