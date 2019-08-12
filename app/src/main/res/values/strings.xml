@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">KotNots</string>
+  <string name="add_note">Add Note</string>
+  <string name="add_a_photo">Add a Photo</string>
+  <string name="add_voice_note">Add Voice Note</string>
+  <string name="save">Save</string>
+</resources>
