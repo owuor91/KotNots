@@ -1,11 +1,15 @@
-package io.github.owuor91.kotnots
+package io.github.owuor91.kotnots.activities
 
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.Toast
+import io.github.owuor91.kotnots.R.layout
 import io.github.owuor91.kotnots.R.string
+import io.github.owuor91.kotnots.sql.DatabaseHelper
+import io.github.owuor91.kotnots.sql.Note
 import kotlinx.android.synthetic.main.activity_add_note.addNoteActivityToolbar
 import kotlinx.android.synthetic.main.activity_add_note.btnSaveNote
 import kotlinx.android.synthetic.main.activity_add_note.etNoteText
@@ -18,7 +22,7 @@ class AddNoteActivity : BaseActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_add_note)
+    setContentView(layout.activity_add_note)
 
     btnSaveNote.setOnClickListener {
       clickSaveNote()
@@ -50,7 +54,13 @@ class AddNoteActivity : BaseActivity() {
     }
 
     if (!error) {
-
+      var databaseHelper = DatabaseHelper(baseContext, "Notes", null, 1);
+      var note = Note(title = title, noteText = noteText)
+      databaseHelper.insertNote(note)
+  
+      Toast.makeText(baseContext, "Note saved successfully", Toast.LENGTH_SHORT)
+          .show()
+      finish()
     }
   }
 

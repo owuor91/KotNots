@@ -3,6 +3,7 @@
     package="io.github.owuor91.kotnots">
 
   <application
+      android:name=".KotNotsApplication"
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
@@ -10,7 +11,7 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
     <activity
-        android:name=".MainActivity"
+        android:name=".activities.MainActivity"
         android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -19,11 +20,11 @@
       </intent-filter>
     </activity>
     <activity
-        android:name=".AddNoteActivity"
+        android:name=".activities.AddNoteActivity"
         android:theme="@style/AppTheme.NoActionBar">
       <meta-data
           android:name="android.support.PARENT_ACTIVITY"
-          android:value="io.github.owuor91.kotnots.MainActivity"/>
+          android:value="io.github.owuor91.kotnots.activities.MainActivity"/>
     </activity>
   </application>
 
