@@ -2,6 +2,7 @@ package io.github.owuor91.kotnots
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import io.github.owuor91.kotnots.R.string
@@ -9,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_add_note.addNoteActivityToolbar
 import kotlinx.android.synthetic.main.activity_add_note.btnSaveNote
 import kotlinx.android.synthetic.main.activity_add_note.etNoteText
 import kotlinx.android.synthetic.main.activity_add_note.etTitle
+import kotlinx.android.synthetic.main.activity_add_note.imgBitmap
 import kotlinx.android.synthetic.main.activity_add_note.tvAddPhoto
 
 class AddNoteActivity : BaseActivity() {
@@ -59,11 +61,9 @@ class AddNoteActivity : BaseActivity() {
   ) {
     super.onActivityResult(requestCode, resultCode, data)
     if (requestCode == TAKE_PIC_INTENT && resultCode == Activity.RESULT_OK) {
-      var extras = data!!.extras!!
-      //var bitmap:Bitmap = extras!!.get("data")!!
-
-      //imgBitmap.setImageBitmap(bitmap)
-
+      var extras = data?.extras
+      var bitmap = extras?.get("data") as? Bitmap
+      imgBitmap.setImageBitmap(bitmap)
     }
   }
 }
