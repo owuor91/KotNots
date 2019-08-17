@@ -1,10 +1,13 @@
 <resources>
-  <string name="app_name">KotNots</string>
-  <string name="add_note">Add Note</string>
-  <string name="add_a_photo">Add a Photo</string>
-  <string name="add_voice_note">Add Voice Note</string>
-  <string name="save">Save</string>
-  <string name="kotnots">KotNots</string>
-  <string name="please_enter_note_text">Please enter note text!</string>
-  <string name="please_enter_title">Please enter title!</string>
+    <string name="app_name">KotNots</string>
+    <string name="add_note">Add Note</string>
+    <string name="add_a_photo">Add a Photo</string>
+    <string name="add_voice_note">Add Voice Note</string>
+    <string name="save">Save</string>
+    <string name="kotnots">KotNots</string>
+    <string name="please_enter_note_text">Please enter note text!</string>
+    <string name="please_enter_title">Please enter title!</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="view_note">View Note</string>
 </resources>

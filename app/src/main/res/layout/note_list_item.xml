@@ -69,24 +69,24 @@
           />
       
       <TextView
-          android:id="@+id/tvNoteItemEdit"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginRight="24dp"
-          android:drawableLeft="@drawable/ic_mode_edit_blue_24dp"
-          android:gravity="center_vertical"
-          android:text="Edit"
-          android:textColor="@color/colorSecondaryText"
+              android:id="@+id/tvNoteItemEdit"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="24dp"
+              android:drawableLeft="@drawable/ic_mode_edit_blue_24dp"
+              android:gravity="center_vertical"
+              android:text="@string/edit"
+              android:textColor="@color/colorSecondaryText"
           />
       
       <TextView
-          android:id="@+id/tvNoteItemDelete"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:drawableLeft="@drawable/ic_delete_forever_blue_24dp"
-          android:gravity="center_vertical"
-          android:text="Delete"
-          android:textColor="@color/colorSecondaryText"
+              android:id="@+id/tvNoteItemDelete"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/ic_delete_forever_blue_24dp"
+              android:gravity="center_vertical"
+              android:text="@string/delete"
+              android:textColor="@color/colorSecondaryText"
           />
     
     </LinearLayout>

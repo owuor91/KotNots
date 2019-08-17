@@ -1,5 +1,6 @@
 package io.github.owuor91.kotnots.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -7,6 +8,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import io.github.owuor91.kotnots.R
+import io.github.owuor91.kotnots.activities.ViewNoteActivity
 import io.github.owuor91.kotnots.sql.Note
 
 class NotesAdapter(val noteList: List<Note>) : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
@@ -58,6 +60,7 @@ class NotesAdapter(val noteList: List<Note>) : RecyclerView.Adapter<NotesAdapter
       tvNoteItemText.text = note.noteText
       
       cvNoteRoot.setOnClickListener {
+          it.context.startActivity(Intent(it.context, ViewNoteActivity::class.java).putExtra("NOTE_ID", note.id))
       }
       
     }
