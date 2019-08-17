@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import io.github.owuor91.kotnots.R
 import io.github.owuor91.kotnots.sql.DatabaseHelper
-import kotlinx.android.synthetic.main.activity_view_note.*
+import kotlinx.android.synthetic.main.activity_view_note.toolbar
+import kotlinx.android.synthetic.main.activity_view_note.tvNoteText
+import kotlinx.android.synthetic.main.activity_view_note.tvNoteTitle
 
 class ViewNoteActivity : AppCompatActivity() {
     private var noteId: Int = 0
@@ -17,6 +19,9 @@ class ViewNoteActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+      setSupportActionBar(toolbar)
+      supportActionBar?.setDisplayShowTitleEnabled(false)
+      supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onResume() {
